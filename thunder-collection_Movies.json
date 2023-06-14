@@ -1,0 +1,42 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Movies",
+    "dateExported": "2023-05-26T17:53:43.961Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "a22bf060-f43f-4762-ba7c-eb89861186c8",
+            "colId": "bb28ae98-6091-43e2-8993-709c2d03df37",
+            "containerId": "",
+            "name": "Add New Movie",
+            "url": "http://localhost:8080/movies",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-05-25T00:54:29.760Z",
+            "modified": "2023-05-25T18:39:32.164Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Avengers 3\",\n  \"rate\": 9,\n  \"type\": \"Movie\", \n  \"category\": [\"Action\",\"Sci-Fiction\"],\n  \"products\": [\"646fab56ab180a36b89c99d7\"],\n  \"production_year\": 2023,\n  \"trailer\": \"youtube.com\",\n  \"poster\": \"img1\",\n  \"videos\": \"video.url\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3e6a3687-4d76-4d61-88b0-0c66a055336b",
+            "colId": "bb28ae98-6091-43e2-8993-709c2d03df37",
+            "containerId": "",
+            "name": "Get All Movies",
+            "url": "http://localhost:8080/movies",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-05-25T00:55:14.841Z",
+            "modified": "2023-05-25T00:56:57.977Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

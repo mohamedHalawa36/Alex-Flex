@@ -1,0 +1,177 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Products",
+    "dateExported": "2023-05-26T17:53:25.426Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "f286aded-88bd-4275-a4ae-62e24bd854c4",
+            "colId": "67a125ed-3ecf-4570-8d38-05fdef4d75b4",
+            "containerId": "",
+            "name": "Get All Products",
+            "url": "http://localhost:8080/products?page=1",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-05-25T00:48:23.969Z",
+            "modified": "2023-05-25T21:25:04.158Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "page",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "0ac6ac17-0111-40cb-bcd8-3762283935f3",
+            "colId": "67a125ed-3ecf-4570-8d38-05fdef4d75b4",
+            "containerId": "",
+            "name": "Get Product by ID",
+            "url": "http://localhost:8080/products/646ebbff0a00b9e7a8564e0e",
+            "method": "GET",
+            "sortNum": 12500,
+            "created": "2023-05-25T00:48:40.876Z",
+            "modified": "2023-05-25T01:53:02.509Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "afe27d63-ca6f-4f71-b28d-d799ee44d482",
+            "colId": "67a125ed-3ecf-4570-8d38-05fdef4d75b4",
+            "containerId": "",
+            "name": "Create New Product",
+            "url": "http://localhost:8080/products",
+            "method": "POST",
+            "sortNum": 15000,
+            "created": "2023-05-25T00:49:19.052Z",
+            "modified": "2023-05-25T21:26:05.056Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "mohaned"
+                    },
+                    {
+                        "name": "price",
+                        "value": "50"
+                    },
+                    {
+                        "name": "description",
+                        "value": "Spiderman Cotton T.shirt"
+                    },
+                    {
+                        "name": "colors",
+                        "value": "[ red,green ]"
+                    },
+                    {
+                        "name": "available",
+                        "value": "5"
+                    },
+                    {
+                        "name": "category",
+                        "value": "T-shirt"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "img",
+                        "value": "c:\\Users\\MOHANED\\Desktop\\1f87016f-ba05-4f35-9bac-ef850162b5f5.png"
+                    },
+                    {
+                        "name": "img",
+                        "value": "c:\\Users\\MOHANED\\Desktop\\106072975_2699005640204697_9148941975318686770_n.png"
+                    },
+                    {
+                        "name": "img",
+                        "value": "c:\\Users\\MOHANED\\Desktop\\4c443992f6106654fc270b3ca708d29e.jpg"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "6175871d-1c94-491b-ab36-6f862f8d75c6",
+            "colId": "67a125ed-3ecf-4570-8d38-05fdef4d75b4",
+            "containerId": "",
+            "name": "Update Product",
+            "url": "http://localhost:8080/products/",
+            "method": "PATCH",
+            "sortNum": 50000,
+            "created": "2023-05-25T00:49:34.026Z",
+            "modified": "2023-05-25T00:56:06.995Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "47ccd40a-3719-41da-bc4a-656728dcadf5",
+            "colId": "67a125ed-3ecf-4570-8d38-05fdef4d75b4",
+            "containerId": "",
+            "name": "Search Product",
+            "url": "http://localhost:8080/products/search?movie=a&minPrice=1&maxPrice=50",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-05-25T00:49:55.992Z",
+            "modified": "2023-05-25T19:59:42.422Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "price",
+                    "value": "",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "name",
+                    "value": "b",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "category",
+                    "value": "T-shirt",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "movie",
+                    "value": "a",
+                    "isPath": false
+                },
+                {
+                    "name": "minPrice",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "maxPrice",
+                    "value": "50",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "4aea6c95-17c1-4250-a8cd-d50c9cfd6a7d",
+            "colId": "67a125ed-3ecf-4570-8d38-05fdef4d75b4",
+            "containerId": "",
+            "name": "Delete Product by ID",
+            "url": "http://localhost:8080/products/646fd26d50f77da4a0b822f1",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2023-05-25T00:49:45.749Z",
+            "modified": "2023-05-25T21:26:18.307Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
