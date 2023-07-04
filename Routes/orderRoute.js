@@ -20,7 +20,7 @@ router.get("/admin/order/", authorization, controller.adminGetAllOrders);
 
 router
   .route("/admin/order/:_id")
-  //.all(authorization)
+  .all(authorization)
   .get(dataSchema.paramMongoIdCheck, validator, controller.adminGetOrderById)
   .patch(
     dataSchema.paramMongoIdCheck,

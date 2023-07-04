@@ -7,6 +7,7 @@ const moviesExists = require("../Middlewares/services/moviesExists");
 const deleteOrdersUser = require("../Middlewares/services/deleteOrdersUser");
 const userValidation = require("../Middlewares/validation/userValidation");
 const {forgetPasswordValidation} = require("../Middlewares/validation/accountValidation");
+const checkEmail = require("../Middlewares/services/uniqueEmail");
 
 const router = Router();
 
@@ -15,6 +16,7 @@ router
   .get(userController.getUserData)
   .post(
     authorization,
+    checkEmail,
     userValidation.addValidate,
     validate,
     userController.addUser
@@ -31,7 +33,8 @@ router
     validate,
     userController.addFavoritesUser
   )
-  .delete(
+  
+  router.delete("/user/favorites/:id",
     userValidation.deleteFavoriteValidation,
     validate,
     userController.deleteFavoritesUser
