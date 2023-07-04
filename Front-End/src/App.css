@@ -110,6 +110,24 @@ border-color: var(--specialColor);
   border: none;
 }
 
+#confirm-email #confirm-icon{
+  color: var(--specialColor);
+}
+#confirm-email #emailToConfirm{
+  color: var(--specialColor);
+}
+
+#change-pass-section #save-changes-pass,#reset-pass-section #save-new-pass{
+  background-color: var(--textColor);
+  color: var(--bgColor);
+  border: none;
+}
+#change-pass-section #save-changes-pass:hover,#reset-pass-section #save-new-pass:hover{
+  background-color: var(--specialColor);
+}
+
+
+
 .bg-cover {
   background-image: var(--bg-cover);
   background-position: center center;

@@ -32,6 +32,7 @@ export default function Footer() {
 
       <div className="footer-col">
         <h4>My Account</h4>
+        <Link className={`text-info ${token?"d-none":""}`} to={"/register"} >Register</Link>
         <Link className=" text-info" to={token?"/profile":"/login"} >{token?"Profile":"Sign In"}</Link>
         <Link className=" text-info" to={`/store/cart`}>View Cart</Link>
         <Link className=" text-info" to={`/favorites`}>My Favorites</Link>
