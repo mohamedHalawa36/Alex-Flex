@@ -867,8 +867,17 @@ body {
   footer .copyright {
     text-align: start;
   }
+  #pagination {
+    margin-left: 30px !important;
+    flex-wrap: wrap !important;
+  }
+  #pagination li {
+  width: 5% !important;
+  display: flex;
+  justify-content: center !important;
+  margin-right: 15px !important;
+  }
 }
-
 .error {
   font-size: 14px;
 }
