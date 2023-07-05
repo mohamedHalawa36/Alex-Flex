@@ -13,16 +13,19 @@ export function Nav({ positionStyle }) {
   const [isloggedIn, setIsloggedIn] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const totalInCart = useSelector((state) => state.cart.total);
-  const linkClickHandle = (e) => {
+  const linkClickHandle = (e)=>{
+    window.scrollTo(0, 0);
+    if (
+      window.innerWidth <= navCollapseScreen &&
+      toggler.current.getAttribute("aria-expanded") === "true"
+    ) {
+      let bsCollapse = new bootstrap.Collapse(navbar.current);
+      bsCollapse.hide();
+    }
+  }
+  const linkClickHandleWithGuestCheck = (e) => {
     if (localStorage.getItem("token")) {
-      window.scrollTo(0, 0);
-      if (
-        window.innerWidth <= navCollapseScreen &&
-        toggler.current.getAttribute("aria-expanded") === "true"
-      ) {
-        let bsCollapse = new bootstrap.Collapse(navbar.current);
-        bsCollapse.hide();
-      }
+      linkClickHandle(e);
     } else {
       e.preventDefault();
       return PopUpMsg({ message: "Please Login First" });
@@ -75,7 +78,7 @@ export function Nav({ positionStyle }) {
           <ul className="navbar-nav mb-2 mb-lg-0 flex-grow-1">
             <li className="nav-item">
               <NavLink
-                onClick={linkClickHandle}
+                onClick={linkClickHandleWithGuestCheck}
                 className="nav-link"
                 to={"/movies"}
                 end
@@ -85,7 +88,7 @@ export function Nav({ positionStyle }) {
             </li>
             <li className="nav-item">
               <NavLink
-                onClick={linkClickHandle}
+                onClick={linkClickHandleWithGuestCheck}
                 className="nav-link"
                 to={"/series"}
                 end
@@ -95,7 +98,7 @@ export function Nav({ positionStyle }) {
             </li>
             <li className="nav-item">
               <NavLink
-                onClick={linkClickHandle}
+                onClick={linkClickHandleWithGuestCheck}
                 className="nav-link"
                 to={"/anime"}
                 end
@@ -105,7 +108,7 @@ export function Nav({ positionStyle }) {
             </li>
             <li className="nav-item">
               <NavLink
-                onClick={linkClickHandle}
+                onClick={linkClickHandleWithGuestCheck}
                 className="nav-link position-relative"
                 to={"/store"}
                 end
@@ -120,7 +123,7 @@ export function Nav({ positionStyle }) {
             <li id="separator" className="nav-item flex-grow-1"></li>
             <li id="lg-bag" className="nav-item ">
               <NavLink
-                onClick={linkClickHandle}
+                onClick={linkClickHandleWithGuestCheck}
                 className="nav-link  me-2"
                 to={"/store/cart"}
               >
@@ -157,7 +160,7 @@ export function Nav({ positionStyle }) {
               <ul id="user_dropdown" className="dropdown-menu">
                 <li>
                   <Link
-                    onClick={linkClickHandle}
+                    onClick={linkClickHandleWithGuestCheck}
                     className="dropdown-item text-capitalize"
                     to={"/profile"}
                   >
@@ -167,7 +170,7 @@ export function Nav({ positionStyle }) {
 
                 <li>
                   <Link
-                    onClick={linkClickHandle}
+                    onClick={linkClickHandleWithGuestCheck}
                     className="dropdown-item text-capitalize"
                     to={"/favorites"}
                   >
@@ -176,7 +179,7 @@ export function Nav({ positionStyle }) {
                 </li>
                 <li>
                   <Link
-                    onClick={linkClickHandle}
+                    onClick={linkClickHandleWithGuestCheck}
                     className="dropdown-item text-capitalize"
                     to={"/user/orders"}
                   >
@@ -186,7 +189,7 @@ export function Nav({ positionStyle }) {
 
                 <li>
                   <Link
-                    onClick={linkClickHandle}
+                    onClick={linkClickHandleWithGuestCheck}
                     className="dropdown-item text-capitalize"
                     to={"/settings"}
                   >
