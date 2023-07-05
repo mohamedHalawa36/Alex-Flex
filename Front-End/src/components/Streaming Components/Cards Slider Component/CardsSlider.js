@@ -31,8 +31,8 @@ export function CardsSlider({ title, movies, type }) {
   const handleDragStart = (e) => e.preventDefault();
 
   return (
-    <div style={{ userSelect: "none" }} className={`movie-slider my-4 px-5 ${items.length===0?"d-none":""}`}>
-      <h2 className="title text-capitalize m-2 mb-4">{title}</h2>
+    <div style={{ userSelect: "none" }} className={`movie-slider my-4 px-3 px-xl-5 ${items.length===0?"d-none":""}`}>
+      <h2 className="title text-capitalize ms-0 m-2 mb-4">{title}</h2>
       {Carousel()}
     </div>
   );
