@@ -41,7 +41,7 @@ export function Home() {
         <img src={homeImage} className="w-100 h-100" alt="Home-Img" />
         <div className="text-content position-absolute start-50 top-25 text-center fw-bold">
           <h1 id="welcome-msg" className="text-capitalize mb-4 ">
-            welcome to <span className="text-uppercase">alexflix</span>
+            welcome to <span className="text-uppercase d-inline-block mt-3">alexflix</span>
           </h1>
           <p id="description" className="fs-4 m-0">
             Millions of movies, TV shows, Animes and thier wonderfull products
