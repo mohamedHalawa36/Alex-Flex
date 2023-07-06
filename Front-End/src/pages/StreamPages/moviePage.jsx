@@ -10,10 +10,7 @@ import { CardsSlider } from "../../components/Streaming Components//Cards Slider
 import { getMovie } from "../../api/apiMovies";
 import SeriesHandler from "../../components/Streaming Components/SeriesHandling/SeriesHandler";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  getAllFav,
-  removeFromList,
-} from "../../store/Slice/videosSlice";
+import { getAllFav, removeFromList } from "../../store/Slice/videosSlice";
 import { addToFavorites, deleteFromFavorites } from "../../api/apiStream";
 import "../../components/Streaming Components/StreamPagesStyles/movie.css";
 export default function MovieDetails() {
@@ -31,7 +28,7 @@ export default function MovieDetails() {
   const playerRef = useRef(null);
   useEffect(() => {
     getMoviedetails();
-    if (favorites.length === 0) dispatch(getAllFav());
+    dispatch(getAllFav());
   }, []);
 
   useEffect(() => {
