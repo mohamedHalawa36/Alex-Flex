@@ -197,7 +197,7 @@ exports.addUser = (req, res, next) => {
     isAdmin,
   });
   const id = jwt.sign({ id: userData._id }, process.env.KEY);
-  const confirmationLink = `${process.env.Url_FrontEnd}/login/?id=${id}`;
+  const confirmationLink = `${req.hostname}/login/?id=${id}`;
   sendEmail
     .sendMessage({
       to: email,
