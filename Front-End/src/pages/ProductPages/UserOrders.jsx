@@ -13,7 +13,7 @@ export default function UserOrders() {
   if (!orders?.length) {
     return (
       <div className="text-danger d-flex justify-content-center mt-5 fw-bold fs-5">
-        You don't make any orders yet ..
+        You don't have any orders yet ..
       </div>
     );
   }

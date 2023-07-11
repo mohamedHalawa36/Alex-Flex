@@ -12,7 +12,7 @@ export default function ConfirmEmail() {
             <i id="confirm-icon" className="fa-solid fa-envelope-open-text fa-5x text-red pt-4 pb-3"></i>
             <h2 className="pt-3 pb-2">Success!</h2>
             <p className="pb-4">
-              A email has been send to
+              An email has been send to
               <span id="emailToConfirm" className="text-red px-2">{searchParams.get("email")}</span> Please check
               for an email from company and click on the included link.
             </p>
